@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>ChatOnlineBS</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.min.css">
+
+</head>
+<body>
+<div class="container"
+     style="background: linear-gradient(var(--bs-yellow) 91%, white 100%), var(--bs-yellow);height: 223px;min-height: 100vh;">
+    <nav class="d-md-flex justify-content-md-center">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -64 640 640" width="1em" height="1em" fill="currentColor"
+             style="font-size: 84px;color: var(--bs-body-bg);">
+            <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+            <path d="M86.344,197.834a51.767,51.767,0,0,0-41.57,20.058V156.018a8.19,8.19,0,0,0-8.19-8.19H8.19A8.19,8.19,0,0,0,0,156.018V333.551a8.189,8.189,0,0,0,8.19,8.189H36.584a8.189,8.189,0,0,0,8.19-8.189v-8.088c11.628,13.373,25.874,19.769,41.573,19.769,34.6,0,61.922-26.164,61.922-73.843C148.266,225.452,121.229,197.834,86.344,197.834ZM71.516,305.691c-9.593,0-21.221-4.942-26.745-12.5V250.164c5.528-7.558,17.152-12.791,26.745-12.791,17.734,0,31.107,13.082,31.107,34.013C102.623,292.609,89.25,305.691,71.516,305.691Zm156.372-59.032a17.4,17.4,0,1,0,17.4,17.4A17.4,17.4,0,0,0,227.888,246.659ZM273.956,156.7V112.039a13.308,13.308,0,1,0-10.237,0V156.7a107.49,107.49,0,1,0,10.237,0Zm85.993,107.367c0,30.531-40.792,55.281-91.112,55.281s-91.111-24.75-91.111-55.281,40.792-55.281,91.111-55.281S359.949,233.532,359.949,264.062Zm-50.163,17.4a17.4,17.4,0,1,0-17.4-17.4h0A17.4,17.4,0,0,0,309.786,281.466ZM580.7,250.455c-14.828-2.617-22.387-3.78-22.387-9.885,0-5.523,7.268-9.884,17.735-9.884a65.56,65.56,0,0,1,34.484,10.1,8.171,8.171,0,0,0,11.288-2.468c.07-.11.138-.221.2-.333l8.611-14.886a8.2,8.2,0,0,0-2.867-11.123,99.863,99.863,0,0,0-52.014-14.138c-38.956,0-60.179,21.514-60.179,46.225,0,36.342,33.725,41.864,57.563,45.642,13.373,2.326,24.13,4.361,24.13,11.048,0,6.4-5.523,10.757-18.9,10.757-13.552,0-30.994-6.222-42.623-13.579a8.206,8.206,0,0,0-11.335,2.491c-.035.054-.069.108-.1.164l-10.2,16.891a8.222,8.222,0,0,0,2.491,11.066c15.224,10.3,37.663,16.692,59.441,16.692,40.409,0,63.957-19.769,63.957-46.515C640,260.63,604.537,254.816,580.7,250.455Zm-95.928,60.787a8.211,8.211,0,0,0-9.521-5.938,23.168,23.168,0,0,1-4.155.387c-7.849,0-12.5-6.106-12.5-14.245V240.28h20.349a8.143,8.143,0,0,0,8.141-8.143V209.466a8.143,8.143,0,0,0-8.141-8.143H458.594V171.091a8.143,8.143,0,0,0-8.143-8.143H422.257a8.143,8.143,0,0,0-8.143,8.143h0v30.232H399a8.143,8.143,0,0,0-8.143,8.143h0v22.671A8.143,8.143,0,0,0,399,240.28h15.115v63.667c0,27.037,15.408,41.282,43.9,41.282,12.183,0,21.383-2.2,27.6-5.446a8.161,8.161,0,0,0,4.145-9.278Z"></path>
+        </svg>
+    </nav>
+    <div style="padding-top: 0px;margin-top: 40px;">
+        <div class="row mt-5" th:utext="${isUser ? updateHtml1 : updateHtml}" >
+<!--            <div class="col-md-1 offset-md-0 d-md-flex justify-content-md-center align-items-md-center">-->
+<!--                <svg xmlns="http://www.w3.org/2000/svg" viewBox="-32 0 512 512" width="1em" height="1em"-->
+<!--                     fill="currentColor" style="font-size: 39px;width: 35px;">-->
+<!--                    &lt;!&ndash;! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. &ndash;&gt;-->
+<!--                    <path d="M272 304h-96C78.8 304 0 382.8 0 480c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32C448 382.8 369.2 304 272 304zM48.99 464C56.89 400.9 110.8 352 176 352h96c65.16 0 119.1 48.95 127 112H48.99zM224 256c70.69 0 128-57.31 128-128c0-70.69-57.31-128-128-128S96 57.31 96 128C96 198.7 153.3 256 224 256zM224 48c44.11 0 80 35.89 80 80c0 44.11-35.89 80-80 80S144 172.1 144 128C144 83.89 179.9 48 224 48z"></path>-->
+<!--                </svg>-->
+<!--            </div>-->
+<!--            <div class="col">-->
+<!--                <div class="row d-md-flex"-->
+<!--                     style="padding-left: 36px;padding-right: 36px;border-radius: 24px;background: var(&#45;&#45;bs-blue);margin-right: 54px;">-->
+<!--                    <div class="col d-md-flex justify-content-md-start align-items-md-center">-->
+<!--                        <p class="font-monospace"-->
+<!--                           style="font-style: italic;">-->
+<!--                            Message</p></div>-->
+<!--                </div>-->
+<!--            </div>-->
+        </div>
+        <div class="row mt-5" th:utext="${isUser ? updateHtml : updateHtml1}" th:if="${isUser}">
+<!--            <div class="col-md-10 offset-md-0 d-md-flex justify-content-md-end"-->
+<!--                 style="background: var(&#45;&#45;bs-blue);border-radius: 24px;margin-left: 54px;">-->
+<!--                <div class="row">-->
+<!--                    <div class="col"><p class="font-monospace" style="font-style: italic;">message</p></div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col d-md-flex justify-content-md-center align-items-md-center">-->
+<!--                <svg xmlns="http://www.w3.org/2000/svg" viewBox="-32 0 512 512" width="1em" height="1em"-->
+<!--                     fill="currentColor" style="font-size: 36px;width: 35px;">-->
+<!--                    &lt;!&ndash;! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. &ndash;&gt;-->
+<!--                    <path d="M224 256c70.7 0 128-57.31 128-128s-57.3-128-128-128C153.3 0 96 57.31 96 128S153.3 256 224 256zM274.7 304H173.3C77.61 304 0 381.6 0 477.3c0 19.14 15.52 34.67 34.66 34.67h378.7C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304z"></path>-->
+<!--                </svg>-->
+<!--            </div>-->
+        </div>
+    </div>
+</div>
+<div class="container" style="margin-bottom: 22px;">
+    <form action="/send" method="post">
+        <div class="row">
+            <div class="col-md-10 d-md-flex justify-content-md-start">
+                <input
+                        class="form-control d-md-flex justify-content-md-start" type="text"
+                        data-bss-hover-animate="flash"
+                        style="width: 100%;background: var(--bs-gray-300);" placeholder="Your message" name="message"
+                        th:required="required">
+            </div>
+            <div class="col d-md-flex justify-content-md-end">
+                <button class="btn btn-primary" type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
+                         viewBox="0 0 16 16" class="bi bi-send-fill" style="font-size: 19px;margin-right: 21px;">
+                        <path fill-rule="evenodd"
+                              d="M15.964.686a.5.5 0 0 0-.65-.65l-.095.038L.767 5.854l-.001.001-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.563 2.903.432.275.275.432 2.903 4.563.002.002.26.41a.5.5 0 0 0 .886-.083l.181-.453L15.926.78l.038-.095Zm-1.833 1.89.471-1.178-1.178.471L5.93 9.363l.338.215a.5.5 0 0 1 .154.154l.215.338 7.494-7.494Z"></path>
+                    </svg>
+                    Button
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+<script src="/js/script.min.js"></script>
+</body>
+</html>
